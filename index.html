@@ -76,12 +76,6 @@
             font-weight: normal;
             font-style: normal;
         }
-        @font-face {
-            font-family: 'GyeonggiTitleM';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
         
         body {
             margin: 0;
@@ -93,7 +87,7 @@
             text-align: center; /* 텍스트 가운데 정렬 */
             background-color: #343434; /* 배경색상 */
             color: white; /* 텍스트 색상 */
-            font-family: 'GowunDodum-Regular', Arial, sans-serif; /* 웹폰트 적용 */
+            font-family: 'GowunDodum-Regular'; /* 웹폰트 적용 */
         }
 
         input[type="text"] {
@@ -104,10 +98,11 @@
             background-color: #343434; /* 배경색상과 일치 */
             text-align: center; /* 텍스트 가운데 정렬 */
             color: white; /* 입력된 텍스트 색상 */
-            font-family: 'GowunDodum-Regular', Arial, sans-serif; /* 웹폰트 적용 */
+            font-family: 'GowunDodum-Regular'; /* 웹폰트 적용 */
             width: 70%; /* 상대적인 너비 설정 */
             max-width: 800px; /* 최대 너비 설정 */
             caret-color: white; /* 커서 색상 변경 */
+            border-color: white;
         }
 
         #fontSelector {
@@ -126,16 +121,24 @@
             margin-bottom: 5px;
         }
         
+        ::selection {
+            background: #606060; /* 선택된 텍스트의 배경색을 빨간색으로 변경 */
+        }
+    
+        /* Mozilla Firefox를 위한 추가 설정 */
+        ::-moz-selection {
+            background: #606060;
+        }
+        
     </style>
 </head>
 <body>
     <select id="fontSelector" onchange="changeFont()">
-        <option value="GowunDodum-Regular">GowunDodum</option>
-        <option value="GowunBatang-Regular">GowunBatang</option>
-        <option value="NanumBarunpen">NanumBarunpen</option>
-        <option value="PurenJeonnam">PurenJeonnam</option>
-        <option value="GyeonggiTitleM">GyeonggiTitle</option>
-        <option value="GangwonEdu_OTFBoldA">Gangwon</option>
+        <option value="GowunDodum-Regular">고운돋움</option>
+        <option value="GowunBatang-Regular">고운바탕</option>
+        <option value="NanumBarunpen">나눔바른펜</option>
+        <option value="GangwonEdu_OTFBoldA">강원교육모두체</option>
+        <option value="PurenJeonnam">푸른전남체</option>
     </select>
 
     <div id="version">V. May 16, 2024</div>

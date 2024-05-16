@@ -20,6 +20,9 @@
     <meta name="theme-color" content="#343434">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ttalkkak">
+    <meta name="description" content="Typing practice website">
+    <meta name="thubmnail" content="./assets/thumbnail.png">
     <title>ttalkkak</title>
     <style>
         @font-face {
@@ -89,6 +92,7 @@
             font-family: 'GowunDodum-Regular', Arial, sans-serif; /* 웹폰트 적용 */
             width: 70%; /* 상대적인 너비 설정 */
             max-width: 800px; /* 최대 너비 설정 */
+            caret-color: white; /* 커서 색상 변경 */
         }
 
         #fontSelector {
@@ -107,11 +111,9 @@
         <option value="PurenJeonnam">PurenJeonnam</option>
         <option value="GyeonggiTitleM">GyeonggiTitle</option>
         <option value="GangwonEdu_OTFBoldA">Gangwon</option>
-        <!-- 원하는 만큼의 폰트 옵션을 추가할 수 있습니다 -->
-        
     </select>
 
-    <input type="text" id="textInput" placeholder="Enter your text here">
+    <input type="text" id="textInput" placeholder="Enter your text here" spellcheck="false">
 
     <script>
         function changeFont() {
